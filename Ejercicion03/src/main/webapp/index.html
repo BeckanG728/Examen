@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     
+    <label>Expresion</label> 
+        <input type="text" id="campoverificar"  ><br>
+                   
+        <button onclick="verificacin()">Verificar</button>
+        
+        <script src="jscript.js"">
+         document.getElementById()
+         
+        for (int i = 0; i < formula.length(); i++) {
+            Character c = formula.charAt(i);
+            if (c.equals('[') || c.equals('(') || c.equals('{')) {
+                pilaCaracteres.push(c);
+            } else {
+                Character cTemp = pilaCaracteres.peek(); 
+                int indice = -1;
+                for (int j = 0; j < listaApertura.size(); j++) {
+                    if (listaApertura.get(j).equals(cTemp)) {
+                        indice = j;
+                        break;
+                    }
+                }
+                if (indice != -1) { 
+                    if (listaCierre.get(indice).equals(c)) {
+                        pilaCaracteres.pop();
+                    }
+                }
+            }
+        }
+            
+        </script>
+        
+        
+    </body>   
+    
+    
+    
+    
+</html>
