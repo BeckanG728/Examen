@@ -11,7 +11,7 @@ import dto.Alumno;
  */
 public class Nodo {
   Alumno alumno;
-  private Nodo cabeza;
+  private Nodo siguiente;
   
   public Nodo(Alumno alumnno) {
        this.alumno=alumno;

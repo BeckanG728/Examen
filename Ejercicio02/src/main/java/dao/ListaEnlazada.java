@@ -4,6 +4,7 @@
  */
 package dao;
 import dto.Alumno;
+import dto.Nodo;
 /**
  *
  * @author Dell
@@ -14,7 +15,7 @@ public class ListaEnlazada {
      
     
     public ListaEnlazada() {
-         this.cabeza = new Nodo(-1); 
+         this.cabeza =null; 
     } 
         public void agregarAdelante(Alumno alumno) {
         Nodo nuevoNodo = new Nodo(alumno);
