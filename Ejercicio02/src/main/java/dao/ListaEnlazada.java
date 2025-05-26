@@ -3,42 +3,45 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package dao;
+
 import dto.Alumno;
 import dto.Nodo;
+
 /**
  *
  * @author Dell
  */
 public class ListaEnlazada {
-  
+
     private Nodo cabeza;
-     
-    
+
     public ListaEnlazada() {
-         this.cabeza =null; 
-    } 
-        public void agregarAdelante(Alumno alumno) {
-        Nodo nuevoNodo = new Nodo(alumno);
-        nuevoNodo.siguiente = cabeza.siguiente;  
-        cabeza.siguiente = nuevoNodo;  
+        this.cabeza = null;
     }
- 
-    public void eliminarFinal(Alumno alumno ) {
-        Nodo nuevoNodo = new Nodo(alumno); 
+
+    public void agregarAdelante(Alumno alumno) {
+        Nodo nuevoNodo = new Nodo(alumno);
+        nuevoNodo.siguiente = cabeza.siguiente;
+        cabeza.siguiente = nuevoNodo;
+    }
+
+    public void eliminarFinal(Alumno alumno) {
+        Nodo nuevoNodo = new Nodo(alumno);
         if (cabeza == null) {
-            cabeza = nuevoNodo; 
+            cabeza = nuevoNodo;
         } else {
             Nodo actual = cabeza;
- 
+
             while (actual.siguiente != null) {
                 actual = actual.siguiente;
             }
-            actual.siguiente = nuevoNodo; 
-         }}
-       
+            actual.siguiente = nuevoNodo;
+        }
+    }
+
 }
 
-   public void imprimir(Alumno alumno) {
+public void imprimir(Alumno alumno) {
         Nodo actual = cabecera.siguiente; 
         while (actual != null) {
             System.out.print(actual.dato + " -> ");
@@ -49,14 +52,12 @@ public class ListaEnlazada {
 
 
     public promediofinal (Alumno alumno){
-    double promedio;
-    double contador;
-    double resultado;
+        double promedio;
+        double contador;
+        double resultado;
     for (int i=0; alumno.costoProd.lenght; i++){
         resultado+=alumno.costoProd;
         contador++;
-    System.out.println("promedio de costos:"+(resultado/contador));
-}
-}
+        System.out.println("promedio de costos:"+(resultado/contador));
+    }
   }
-
